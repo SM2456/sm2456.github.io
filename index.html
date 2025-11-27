@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sumedha Majumdar | Portfolio</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0f172a;
+      --panel: #111b31;
+      --text: #e8edf7;
+      --muted: #9fb0d1;
+      --accent: #60f3c5;
+      --accent-2: #7aa7ff;
+      --border: rgba(255, 255, 255, 0.08);
+      --shadow: 0 15px 40px rgba(0, 0, 0, 0.35);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Space Grotesk", "Manrope", system-ui, -apple-system, sans-serif;
+      background: radial-gradient(circle at 20% 20%, rgba(96, 243, 197, 0.08), transparent 25%),
+                  radial-gradient(circle at 80% 0%, rgba(122, 167, 255, 0.14), transparent 22%),
+                  linear-gradient(140deg, #0c1325 0%, #0f172a 60%, #0b1220 100%);
+      color: var(--text);
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+    a { color: inherit; text-decoration: none; }
+    header {
+      padding: 28px clamp(18px, 4vw, 38px);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      background: linear-gradient(180deg, rgba(15, 23, 42, 0.9) 0%, rgba(15, 23, 42, 0.6) 60%, transparent 100%);
+      backdrop-filter: blur(6px);
+      z-index: 10;
+    }
+    .brand { font-weight: 700; letter-spacing: 0.6px; display: flex; gap: 10px; align-items: center; }
+    .brand-dot { width: 10px; height: 10px; border-radius: 50%; background: linear-gradient(135deg, var(--accent), var(--accent-2)); box-shadow: 0 0 18px rgba(96, 243, 197, 0.6); }
+    nav { display: flex; gap: 18px; align-items: center; font-size: 15px; }
+    nav a { color: var(--muted); padding: 8px 12px; border-radius: 999px; border: 1px solid transparent; transition: 0.2s ease; }
+    nav a:hover { color: var(--text); border-color: var(--border); background: rgba(255, 255, 255, 0.04); }
+    .btn {
+      padding: 10px 16px;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      background: linear-gradient(135deg, rgba(96, 243, 197, 0.12), rgba(122, 167, 255, 0.1));
+      color: var(--text);
+      font-weight: 600;
+      box-shadow: var(--shadow);
+      transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+    }
+    .btn:hover { transform: translateY(-2px); border-color: rgba(255,255,255,0.18); box-shadow: 0 12px 26px rgba(0,0,0,0.35); }
+    main { padding: clamp(24px, 4vw, 38px); max-width: 1100px; margin: 0 auto 80px; }
+    .hero {
+      margin-top: 28px;
+      padding: clamp(24px, 5vw, 48px);
+      border: 1px solid var(--border);
+      background: linear-gradient(140deg, rgba(96, 243, 197, 0.08) 0%, rgba(122, 167, 255, 0.12) 50%, rgba(15, 23, 42, 0.85) 100%);
+      border-radius: 20px;
+      box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 70% 30%, rgba(255,255,255,0.08), transparent 32%);
+      pointer-events: none;
+    }
+    .hero h1 { margin: 0 0 12px; font-size: clamp(32px, 5vw, 48px); letter-spacing: -0.5px; }
+    .hero p { max-width: 720px; color: var(--muted); margin: 0 0 18px; font-size: 18px; }
+    .chip-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 12px; }
+    .chip { padding: 8px 12px; border-radius: 999px; border: 1px solid var(--border); background: rgba(255,255,255,0.03); color: var(--text); font-size: 14px; letter-spacing: 0.2px; }
+    section { margin-top: 54px; }
+    .section-title { margin-bottom: 14px; letter-spacing: 0.4px; font-size: 16px; color: var(--muted); text-transform: uppercase; }
+    .panel {
+      border: 1px solid var(--border);
+      background: var(--panel);
+      border-radius: 16px;
+      padding: 22px;
+      box-shadow: var(--shadow);
+    }
+    .project-grid { display: grid; gap: 18px; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+    .card { position: relative; overflow: hidden; }
+    .card h3 { margin: 0 0 8px; font-size: 20px; }
+    .card p { margin: 0 0 12px; color: var(--muted); }
+    .card .meta { display: flex; gap: 10px; flex-wrap: wrap; color: var(--muted); font-size: 14px; }
+    .card a { color: var(--accent); font-weight: 600; }
+    .card:hover { transform: translateY(-2px); transition: transform 0.18s ease; }
+    .contact { display: grid; gap: 14px; }
+    .contact a { color: var(--accent); font-weight: 600; }
+    footer { text-align: center; color: var(--muted); padding: 32px 12px 48px; }
+    @media (max-width: 720px) {
+      header { flex-direction: column; align-items: flex-start; gap: 12px; }
+      nav { flex-wrap: wrap; gap: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand"><span class="brand-dot"></span><span>Sumedha Majumdar</span></div>
+    <nav>
+      <a href="#projects">Projects</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+      <a class="btn" href="resume.html" target="_blank" rel="noopener">Resume</a>
+      <a class="btn" href="https://github.com/SM2456" target="_blank" rel="noopener">GitHub</a>
+      <a class="btn" href="https://www.linkedin.com/in/sumedha-majumdar/" target="_blank" rel="noopener">LinkedIn</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>Passionate about turning complex problems into elegant, impactful software.</h1>
+      <p>Hi, I am Sumedha Majumdar. I craft end-to-end solutions that balance clarity, performance, and user value with experience across cloud-native systems, serverless architectures, and modern AI tooling.</p>
+      <div class="chip-row">
+        <span class="chip">Problem Solver</span>
+        <span class="chip">System Design</span>
+        <span class="chip">RAG and AI</span>
+        <span class="chip">Serverless on AWS</span>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="section-title">Projects</div>
+      <div class="project-grid">
+        <div class="panel card">
+          <h3>DocBrain</h3>
+          <p>Lightweight Retrieval-Augmented Generation demo to upload documents and ask targeted questions.</p>
+          <div class="meta">
+            <span>RAG</span><span>Python</span><span>LLMs</span>
+          </div>
+          <a href="https://github.com/SM2456/docbrain-rag-demo" target="_blank" rel="noopener">View on GitHub | DocBrain</a>
+        </div>
+        <div class="panel card">
+          <h3>Reverse-Proxy-LB</h3>
+          <p>Hands-on walkthrough of nginx as a reverse proxy with load balancing to showcase traffic distribution.</p>
+          <div class="meta">
+            <span>nginx</span><span>Reverse Proxy</span><span>Load Balancing</span>
+          </div>
+          <a href="https://github.com/SM2456/Reverse-Proxy-LB" target="_blank" rel="noopener">View on GitHub | Reverse-Proxy-LB</a>
+        </div>
+        <div class="panel card">
+          <h3>Student Union Portal</h3>
+          <p>Serverless student management (add, update, view, delete) built on AWS with Lambda-driven business logic.</p>
+          <div class="meta">
+            <span>AWS Lambda</span><span>API</span><span>Serverless</span>
+          </div>
+          <a href="https://github.com/SM2456/student-union" target="_blank" rel="noopener">View on GitHub | Student Union Portal</a>
+        </div>
+        <div class="panel card">
+          <h3>Blogtime</h3>
+          <p>Blogging app where users register, post, update, and delete blogs, plus moderate comments on their posts.</p>
+          <div class="meta">
+            <span>Full Stack</span><span>Blogs</span><span>Comments</span>
+          </div>
+          <a href="https://github.com/SM2456/Blogtime" target="_blank" rel="noopener">View on GitHub | Blogtime</a>
+        </div>
+        <div class="panel card">
+          <h3>Chatting &mdash; Instant Messaging</h3>
+          <p>Android IM app enabling two-user chats with chat logs, making mobile texting more seamless.</p>
+          <div class="meta">
+            <span>Android</span><span>Messaging</span><span>Chat Logs</span>
+          </div>
+          <a href="https://github.com/SM2456/NewChattingApplication" target="_blank" rel="noopener">View on GitHub | Chatting</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="section-title">About</div>
+      <div class="panel">
+        <p>I enjoy simplifying complexity and building software that feels intentional whether that is architecting reliable backends, shaping cloud-native flows, or prototyping AI-powered experiences. I value crisp communication, thoughtful defaults, and shipping with quality.</p>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="section-title">Contact</div>
+      <div class="panel contact">
+        <div>Email: <a href="mailto:sumedhamajumdar94@gmail.com">sumedhamajumdar94@gmail.com</a></div>
+        <div>GitHub: <a href="https://github.com/SM2456" target="_blank" rel="noopener">github.com/SM2456</a></div>
+        <div>LinkedIn: <a href="https://www.linkedin.com/in/sumedha-majumdar/" target="_blank" rel="noopener">/in/sumedha-majumdar/</a></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    Crafted with care - Sumedha Majumdar
+  </footer>
+</body>
+</html>

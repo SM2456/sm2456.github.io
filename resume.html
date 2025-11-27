@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sumedha Majumdar | Resume</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0f172a;
+      --panel: #111b31;
+      --text: #e8edf7;
+      --muted: #9fb0d1;
+      --accent: #60f3c5;
+      --accent-2: #7aa7ff;
+      --border: rgba(255, 255, 255, 0.08);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Space Grotesk", "Manrope", system-ui, -apple-system, sans-serif;
+      background: linear-gradient(140deg, #0c1325 0%, #0f172a 60%, #0b1220 100%);
+      color: var(--text);
+      line-height: 1.6;
+      padding: clamp(16px, 4vw, 28px);
+    }
+    a { color: var(--accent); text-decoration: none; }
+    .container { max-width: 960px; margin: 0 auto; }
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 18px;
+      margin-bottom: 16px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 12px;
+    }
+    .name { font-size: clamp(28px, 4vw, 36px); font-weight: 700; letter-spacing: -0.4px; }
+    .tagline { color: var(--muted); margin: 6px 0 0; }
+    .contact { text-align: right; color: var(--muted); font-size: 14px; }
+    .section { margin-top: 26px; }
+    .section h2 { margin: 0 0 10px; font-size: 16px; text-transform: uppercase; letter-spacing: 0.5px; color: var(--muted); }
+    .card {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 16px;
+      margin-top: 10px;
+    }
+    .row { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+    .pill {
+      display: inline-block;
+      padding: 6px 10px;
+      margin: 4px 6px 0 0;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid var(--border);
+      font-size: 13px;
+      color: var(--text);
+    }
+    .item-title { font-weight: 600; margin: 0; }
+    .item-sub { color: var(--muted); margin: 2px 0 8px; }
+    .list { padding-left: 18px; margin: 0; color: var(--muted); }
+    .list li { margin-bottom: 6px; }
+    @media (max-width: 640px) { .contact { text-align: left; } }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div>
+        <div class="name">Sumedha Majumdar</div>
+        <div class="tagline">Passionate about turning complex problems into simple, elegant, and impactful software solutions.</div>
+      </div>
+      <div class="contact">
+        <div>Phone: 306 807 9110</div>
+        <div><a href="mailto:sumedhamajumdar94@gmail.com">sumedhamajumdar94@gmail.com</a></div>
+        <div><a href="https://www.linkedin.com/in/sumedha-majumdar/" target="_blank" rel="noopener">linkedin.com/in/sumedha-majumdar</a></div>
+        <div><a href="https://github.com/SM2456" target="_blank" rel="noopener">github.com/SM2456</a></div>
+        <div>Location: Oakville, Ontario, Canada</div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Professional Summary</h2>
+      <div class="card">
+        Results-driven Full-Stack Developer with 6+ years of experience in building scalable, distributed applications using Angular for dynamic front-end development and REST API-based distributed back-end architectures. A proactive team collaborator involved throughout the entire software lifecycle — from system design and architecture to development, testing, and production release. Strong advocate for performance optimization, code efficiency, and maintainable design patterns to ensure high-quality, user-centric solutions.
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Top Technical Skills</h2>
+      <div class="card">
+        <ul class="list">
+          <li>Frontend Stack: Angular, TypeScript, NgRx, HTML5, CSS3, Tailwind CSS, JavaScript, jQuery.</li>
+          <li>Backend Stack: Python, Flask, Fast API, Java, Spring Boot, C#, MVC, REST API design, GraphQL, ASP.NET Core Web API, Azure Functions and AWS Serverless (ALB, API Gateway, Lambda, S3 Bucket), Docker.</li>
+          <li>Databases &amp; Data Access Layer: PostgreSQL, MSSQL Server, DynamoDB, Entity Framework Core.</li>
+          <li>Event Streaming &amp; Messaging: Kafka Streams, Schema Registry (Avro).</li>
+          <li>Azure Cloud Services: Azure AD B2C (with IEF), Azure Service Bus (Queues &amp; Topics), Azure Storage &amp; Databases, Azure Monitor &amp; App Insights (observability).</li>
+          <li>Testing Frameworks: Jest, Jasmine, Playwright (E2E), MSTest.</li>
+          <li>Source Control &amp; CI/CD: Azure DevOps Pipelines, GitHub.</li>
+          <li>Solid understanding of full software development life cycle, client-server communication, and OSI model.</li>
+          <li>Object-oriented and event-driven systems design; building reactive, scalable Azure-based infrastructures.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Professional Experience</h2>
+      <div class="card">
+        <p class="item-title">Application Developer, Group Medical Services (GMS), Regina, SK</p>
+        <p class="item-sub">August 2021 - Present</p>
+        <p class="item-title">UI/UX Development:</p>
+        <ul class="list">
+          <li>Designed and developed Angular 18 and TypeScript-based front-end features, building reusable components (including an alert banner component) and NgRx feature stores to ensure code reusability, consistent UI behavior, and adherence to development best practices — contributing to a scalable, maintainable architecture across modules such as dashboard, claims portal, and admin portal.</li>
+          <li>Integrated GraphQL and REST API calls with NgRx effects to handle asynchronous data fetching and implemented predictable state transitions using NgRx actions, reducers, selectors, and strict TypeScript models — leveraging AsyncPipe and OnPush change detection to normalize state, reduce unnecessary re-renders, and improve UI responsiveness by ~25% across complex, role-based workflows.</li>
+          <li>Strengthened application stability, reliability, and security by implementing CORS policies and HTTP security headers alongside automated testing using Jest unit tests and Playwright E2E suites (Chromium/Firefox) to validate state logic, authentication, and role-based workflows at scale.</li>
+          <li>Deployed Angular applications to Azure App Service by provisioning App Service Plans, configuring environment variables, and automating release pipelines via Azure DevOps CI/CD — ensuring secure, reliable cloud delivery and repeatable deployments across environments.</li>
+        </ul>
+        <p class="item-title">REST Service Development:</p>
+        <ul class="list">
+          <li>Developed scalable .NET REST APIs using ASP.NET Core Web API and Azure Functions to handle UI requests, designing modular and maintainable endpoints aligned with frontend data structures (such as claims, members, and payments) ensuring seamless data exchange, consistent models, and a cohesive integration between UI and backend layers.</li>
+          <li>Implemented secure authentication and authorization using OAuth2 and JWT token verification, along with robust user session handling to maintain active authentication states — ensuring only verified users from Angular clients could access protected APIs, enhancing end-to-end identity validation, and reducing unauthorized access incidents by ~40%.</li>
+          <li>Optimized backend performance using async/await patterns, well-structured repository and service layers, Azure Cache for Redis for efficient data caching, and paginated data loading, while carefully handling compute- and data-intensive requests through optimized and refactored code — improving backend response times by ~20% and enhancing overall UI rendering performance across data-driven workflows.</li>
+          <li>Wrote comprehensive unit test cases using MSTest, applying mocking frameworks to validate controller logic, service interactions, and API behavior — increasing code reliability and test coverage by ~35% and reducing post-deployment defects.</li>
+          <li>Deployed .NET Web APIs and Azure Functions to Azure App Service using Azure DevOps CI/CD pipelines, configuring environment variables, connection strings, and deployment slots to enable automated, secure, and repeatable backend releases — reducing manual deployment effort by ~40% and ensuring consistent releases across environments.</li>
+        </ul>
+        <p class="item-title">Azure Cloud Services:</p>
+        <ul class="list">
+          <li>Implemented secure Single Sign-On (SSO) using Azure AD B2C with custom Identity Experience Framework (IEF) policies to support federated logins (Azure AD), conditional access with MFA, dynamic branding, and token enrichment via external REST APIs — delivering unified authentication and consistent role/claim propagation across multiple applications.</li>
+          <li>Designed and developed Azure Service Bus–based microservice workflows using queues and topics for event-driven claim processing — enabling ordered, duplicate-safe, and scalable message handling through session-enabled pipelines, filtered topic subscriptions, and correlation IDs, reducing overall processing latency by ~30%.</li>
+          <li>Developed and automated Python-based data workflows to extract, clean, and structure structured and semi-structured data, loading it into Azure Blob Storage and analytics layers to enable reliable, real-time integration with dashboards and reporting tools.</li>
+          <li>Improved data processing speed and scalability by using Python threading, multiprocessing, and modular workflow design, creating reusable and configurable pipelines for multiple data sources and business domains.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <p class="item-title">Programmer Analyst, Cognizant, India</p>
+        <p class="item-sub">October 2016 - November 2018</p>
+        <ul class="list">
+          <li>Built interactive and modular web interfaces using Angular 5, TypeScript, and SCSS, developing reusable components and services that improved code maintainability and reduced duplication across modules.</li>
+          <li>Integrated REST APIs with HttpClient and implemented RxJS Observables to manage asynchronous data flows, ensuring reliable real-time updates and responsive user interactions.</li>
+          <li>Enhanced application performance through lazy loading, route guards, and AOT (Ahead-of-Time) compilation, resulting in faster load times and improved overall user experience.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Personal Projects</h2>
+      <div class="card">
+        <p class="item-title">DocBrain – RAG Knowledge Assistant</p>
+        <ul class="list">
+          <li>Developed a Retrieval-Augmented Generation (RAG) knowledge assistant that enables users to upload documents and query them through a REST API, integrating a gRPC-based microservice for fast internal communication between API and RAG services.</li>
+          <li>Implemented document indexing and question-answering logic with streaming responses, achieving a modular two-service architecture demonstrating REST–gRPC integration, suitable for scaling into production-grade AI systems.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <p class="item-title">Student-Union (AWS Serverless Backend + Angular Frontend)</p>
+        <ul class="list">
+          <li>Built a serverless backend on AWS (Lambda, API Gateway, DynamoDB, IAM) with secure, role-based access controls and scalable RESTful APIs for managing student data (create, update, view, delete).</li>
+          <li>Developed a responsive Angular + NgRx frontend integrated with the backend for state-managed CRUD operations, authentication, and error handling — delivering a seamless, resilient end-to-end student management portal.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <p class="item-title">Scalable Angular Application with NGINX Reverse Proxy &amp; Docker Load Balancing</p>
+        <ul class="list">
+          <li>Built a scalable Angular SPA delivery pipeline using NGINX as a reverse proxy and load balancer, enabling smooth request distribution across multiple NGINX app containers.</li>
+          <li>Implemented Docker-based multi-stage Angular builds, automated environment parity, and repeatable deployments using Docker Compose.</li>
+          <li>Implemented optimized caching strategies, routing rules, and static asset delivery configurations in NGINX to ensure fast load times and consistent SPA behavior.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Education</h2>
+      <div class="card">
+        <ul class="list">
+          <li>MSc in Computer Science, University of Regina, Regina, SK, 2019 – 2021</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Achievements and Certification</h2>
+      <div class="card">
+        <ul class="list">
+          <li>Developed Agentic AI solutions leveraging LangChain, LangGraph, and Retrieval-Augmented Generation (RAG) architectures to build intelligent, context-aware systems integrating large language models with external knowledge sources and automated reasoning workflows.</li>
+          <li>Udemy certification on Kafka Streams on Data processing.</li>
+          <li>Udemy certification on GraphQL By Example.</li>
+          <li>Udemy certification on Flutter and Dart-The Complete Guide.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

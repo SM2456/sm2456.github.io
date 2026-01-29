@@ -172,8 +172,34 @@
           <a href="https://github.com/SM2456/NewChattingApplication" target="_blank" rel="noopener">View on GitHub | Chatting</a>
         </div>
       </div>
-    </section>
-
+      <div class="panel card">
+  <h3>Semantic Caching on EKS</h3>
+  <p>
+    Production-style semantic cache gateway deployed on Amazon EKS, combining
+    Spring Boot microservices, an NGINX edge gateway, Redis vector search, and
+    DynamoDB as a durable source of truth.
+  </p>
+  <div class="meta">
+    <span>EKS</span>
+    <span>Spring Boot</span>
+    <span>NGINX</span>
+    <span>Redis Vector</span>
+    <span>DynamoDB</span>
+    <span>Bedrock</span>
+  </div>
+  <p style="margin-top:10px; color: var(--muted); font-size: 14px;">
+    NGINX uses <code>auth_request</code> to validate API calls via a dedicated auth service,
+    while a semantic cache service generates embeddings, performs vector similarity
+    search in Redis, and falls back to DynamoDB on cache misses. Fully containerized,
+    pushed to ECR, and deployed via Kubernetes manifests, with Docker Compose support
+    for local iteration.
+  </p>
+  <a href="https://github.com/SM2456/semantic-caching-java-springboot-k8s"
+     target="_blank" rel="noopener">
+    View on GitHub | Semantic Caching on EKS
+  </a>
+</div>
+</section>
     <section id="about">
       <div class="section-title">About</div>
       <div class="panel">
